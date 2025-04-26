@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.switch {
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circle {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.switch.active {
+  background-color: #333;
+}
+
+.switch.active .circle {
+  left: 32px;
+}
+
+</style>
+<body>
+    <h2>Light / Dark Mode Toggle</h2>
+    <div class="switch" id="toggleMode">
+        <div class="circle"></div>
+    </div>
+    <p id="modeStatus">Light Mode is ON</p>
+
+    <script src="./index.js"></script>
+</body>
+</html>
